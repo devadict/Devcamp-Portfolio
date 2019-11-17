@@ -1,4 +1,4 @@
-*<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title> <%= @page_title %> </title>
@@ -23,9 +23,7 @@
 
 <%= render "shared/nav", location: 'bottom' %>
 
-   <% if session[:source] %>
-    <p> Thanks from visiting me from <%= session[:source] %>  </p>
-    <% end %>
+   <%= source_helper("application") %>
     
 
   </body>
