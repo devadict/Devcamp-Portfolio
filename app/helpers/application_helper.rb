@@ -13,8 +13,9 @@ def source_helper(layout_name)
 	 if session[:source]
 	 greeting = "Thanks for visiting me from #{session[:source]} and you are on the #{layout_name}" 
 	 	content_tag(:p, greeting, class: "source-greeting")
-        end 
-    
-end
-
+        end
+    end 
+    def copyright_generator
+        DevcampViewTool::Renderer.copyright 'Jordan Hudgens', 'All rights reserved'
+    end
 end
